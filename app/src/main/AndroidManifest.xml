@@ -20,7 +20,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
-        android:allowBackup="false"
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
@@ -36,6 +36,9 @@
         <activity android:name="com.example.android.architecture.blueprints.todoapp.taskdetail.TaskDetailActivity" />
         <activity android:name="com.example.android.architecture.blueprints.todoapp.addedittask.AddEditTaskActivity" />
         <activity android:name="com.example.android.architecture.blueprints.todoapp.statistics.StatisticsActivity" />
+        <activity android:name=".activity.ListItemViewActivity">
+
+        </activity>
     </application>
 
 </manifest>

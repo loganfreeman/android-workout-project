@@ -30,6 +30,7 @@ import android.view.MenuItem;
 
 import com.example.android.architecture.blueprints.todoapp.Injection;
 import com.example.android.architecture.blueprints.todoapp.R;
+import com.example.android.architecture.blueprints.todoapp.activity.ListItemViewActivity;
 import com.example.android.architecture.blueprints.todoapp.statistics.StatisticsActivity;
 import com.example.android.architecture.blueprints.todoapp.util.ActivityUtils;
 import com.example.android.architecture.blueprints.todoapp.util.EspressoIdlingResource;
@@ -101,6 +102,11 @@ public class TasksActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    private void startActivityByClass(Class<?> clazz) {
+        Intent intent = new Intent(TasksActivity.this, clazz);
+        startActivity(intent);
+    }
+
     private void setupDrawerContent(NavigationView navigationView) {
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
@@ -116,6 +122,9 @@ public class TasksActivity extends AppCompatActivity {
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
                                         | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
+                                break;
+                            case R.id.list_item_view:
+                                startActivityByClass(ListItemViewActivity.class);
                                 break;
                             default:
                                 break;
