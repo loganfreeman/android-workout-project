@@ -27,7 +27,7 @@
 
     <item android:id="@+id/list_item_view"
         android:icon="@drawable/ic_statistics"
-        android:title="@string/statistics_title">
+        android:title="@string/listview_demo_title">
 
     </item>
 </menu>
