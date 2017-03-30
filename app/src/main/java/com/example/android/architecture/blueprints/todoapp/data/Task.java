@@ -19,6 +19,7 @@ package com.example.android.architecture.blueprints.todoapp.data;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
+import com.google.common.base.Enums;
 import com.google.common.base.Objects;
 import com.google.common.base.Strings;
 
@@ -28,6 +29,16 @@ import java.util.UUID;
  * Immutable model class for a Task.
  */
 public final class Task {
+
+    public static enum  Kind {
+        Swimming,
+
+        Running,
+
+        StrengthBuilding,
+
+        Hiking
+    }
 
     @NonNull
     private final String mId;
@@ -39,6 +50,10 @@ public final class Task {
     private final String mDescription;
 
     private final boolean mCompleted;
+
+    Kind kind;
+
+
 
     /**
      * Use this constructor to create a new active Task.
